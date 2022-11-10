@@ -20,11 +20,8 @@ let chat = document.querySelector(".chat-window")
 
 darthBtn.onclick = (function() {
   let msg = darthInput.value;
-  let darthMsg = document.createElement("div");
-  darthMsg.classList.add("darth-container");
-  darthMsg.innerHTML = darthImage;
-  darthMsg.insertAdjacentHTML("beforeend", "<p>" + msg + "</p>");
-  chat.appendChild(darthMsg);
+  let darthMsg = '<div class="darth-container">' + darthImage + "<p>" + msg + "</p>" + "</div>";
+  chat.insertAdjacentHTML("beforeend", darthMsg)
 });
 
 // task 10: create an onclick event for the yoda button
@@ -34,9 +31,6 @@ darthBtn.onclick = (function() {
 
 yodaBtn.onclick = (function() {
   let msg = yodaInput.value;
-  let yodaMsg = document.createElement("div");
-  yodaMsg.classList.add("yoda-container");
-  yodaMsg.innerHTML = yodaImage;
-  yodaMsg.insertAdjacentHTML("beforeend", "<p>" + msg + "</p>");
-  chat.appendChild(yodaMsg);
+  let yodaMsg = '<div class="yoda-container">' + yodaImage + "<p>" + msg + "</p>" + "</div>";
+  chat.insertAdjacentHTML("beforeend", yodaMsg)
 });
